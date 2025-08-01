@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+requests
+pinecone
+sentence-transformers
+torch
+openai
+PyMuPDF
+langchain
+tqdm
