@@ -9,8 +9,8 @@ from typing import List
 
 # --- 1. SETUP & CONSTANTS ---
 EXPECTED_AUTH_TOKEN = "c88d7e70b6c77cd88271a48126bcd54761315985a275d864cd7e2b7ba342f1cf"
-JOBS_DIR = "jobs"
-RESULTS_DIR = "results"
+JOBS_DIR = "/data/jobs"
+RESULTS_DIR = "/data/results"
 
 # Ensure directories exist on startup
 os.makedirs(JOBS_DIR, exist_ok=True)

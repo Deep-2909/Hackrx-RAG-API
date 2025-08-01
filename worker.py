@@ -31,9 +31,14 @@ EMBEDDING_MODEL = 'all-MiniLM-L6-v2'
 INDEX_NAME = "hackrx-index"
 GENERATION_MODEL = "mistralai/mistral-7b-instruct-v0.2" # A powerful free model on OpenRouter
 EMBEDDING_DIMENSION = 384
-DB_FILE = "processed_docs.txt"
-JOBS_DIR = "jobs"
-RESULTS_DIR = "results"
+DATA_DIR = "/data"
+DB_FILE = os.path.join(DATA_DIR, "processed_docs.txt")
+JOBS_DIR = os.path.join(DATA_DIR, "jobs")
+RESULTS_DIR = os.path.join(DATA_DIR, "results")
+
+os.makedirs(JOBS_DIR, exist_ok=True)
+os.makedirs(RESULTS_DIR, exist_ok=True)
+
 
 # Load local models
 print("Loading embedding model...")
