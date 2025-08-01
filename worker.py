@@ -15,7 +15,6 @@ import openai # Use the OpenAI library to connect to OpenRouter
 
 # --- 1. SETUP & MODEL LOADING ---
 print("Worker starting up...")
-load_dotenv()
 
 # Configure the OpenRouter client (using the OpenAI library)
 client = openai.OpenAI(
