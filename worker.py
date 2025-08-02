@@ -8,7 +8,6 @@ import requests
 import tempfile
 import fitz
 import pinecone
-from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import openai # Use the OpenAI library to connect to OpenRouter
@@ -16,10 +15,6 @@ import openai # Use the OpenAI library to connect to OpenRouter
 # --- 1. SETUP & MODEL LOADING ---
 print("Worker starting up...")
 
-print("--- DUMPING ALL ENVIRONMENT VARIABLES ---")
-import pprint
-pprint.pprint(dict(os.environ))
-print("--- END OF ENV DUMP ---")
 
 # Configure the OpenRouter client (using the OpenAI library)
 client = openai.OpenAI(
